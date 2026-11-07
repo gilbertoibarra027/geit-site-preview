@@ -158,3 +158,41 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
 @keyframes amb-drift{to{transform:translate(30px,-50px);opacity:.25}}
 @media(max-width:700px){.case-open{grid-template-columns:1fr;grid-template-areas:"num" "stat" "cap" "title" "more";padding:32px 26px}.case-card{position:relative;top:auto}.case-stat b{font-size:64px}.case-cap{font-size:16px}.cs-scroll{padding:90px 6% 80px}.cs-close{top:14px;right:14px;width:48px;height:48px}.cs-result{padding:30px 22px}.cs-metric b{font-size:60px}.stats-2 .stat:nth-child(2){padding-left:20px}.r1{width:320px;height:320px}.scrub-text{font-size:28px}.section h2{font-size:50px}}
 @media(prefers-reduced-motion:reduce){.ambient{display:none}.case-overlay,.cs-block,.cs-metric,.case-open{transition:none!important;opacity:1!important;transform:none!important}.scrub-text span{color:#fff}.case-card{position:relative;top:auto}}
+/* v20261107d pages + icons */
+.ico{width:.8em;height:.8em;display:inline-block;vertical-align:-.05em}
+.ico-x{width:22px;height:22px}
+.cs-close{display:grid;place-items:center}
+.tick-mark{display:inline-block;width:12px;height:12px;background:#fff;transform:rotate(45deg);flex:none}
+.dots{display:inline-block;width:34px;height:6px;background:radial-gradient(circle,currentColor 2.5px,transparent 3px) 0 0/12px 6px repeat-x;opacity:.7}
+.header nav a[aria-current="page"]{color:#ff8fa6}
+.foot-nav{display:flex;flex-wrap:wrap;gap:10px 26px}
+.foot-nav a{font-size:15px;color:#e2dce0}.foot-nav a:hover{color:#ff8fa6}
+footer>div>a{font-size:14px!important}footer p{font-size:13px!important;color:#cfc9cd!important}
+.page-hero{position:relative;overflow:hidden;isolation:isolate;padding:150px 5% 110px;background:linear-gradient(135deg,#0f0f11 0%,#2a0a12 50%,#670118 100%)}
+.page-hero>*:not(.ambient){position:relative;z-index:1}
+.page-hero .eyebrow{color:#ffb3c3}
+.page-hero h1{font-family:var(--display);font-weight:900;font-size:clamp(56px,9vw,150px);line-height:.9;letter-spacing:-.045em;margin:22px 0 0}
+.page-hero h1 span{color:#ff8fa6}
+.page-lede{font-size:clamp(19px,1.7vw,24px);line-height:1.55;color:#ece6e9;max-width:760px;margin:28px 0 0}
+.header{position:relative;z-index:5}
+body:not(:has(.hero)) .header{position:absolute;left:0;right:0;top:0;padding:24px 5%;box-sizing:border-box}
+.svc-detail{display:grid;grid-template-columns:120px 1.1fr 1fr;gap:40px;padding:70px 0;border-top:1px solid #d8cfd2;scroll-margin-top:30px}
+.svc-detail:last-child{border-bottom:1px solid #d8cfd2}
+.svc-num{font-family:var(--display);font-weight:900;font-size:56px;color:#940622;line-height:1}
+.svc-detail h2{font-size:clamp(44px,5.4vw,84px)!important;margin:0;color:#111}
+.svc-lede{font-size:20px;line-height:1.55;color:#3b3438;margin:22px 0 0}
+.svc-list{list-style:none;margin:0;padding:0}
+.svc-list li{position:relative;padding:16px 0 16px 30px;border-bottom:1px solid #e3dadd;font-size:18px;color:#1d1a1c}
+.svc-list li::before{content:"";position:absolute;left:0;top:24px;width:10px;height:10px;background:#940622;transform:rotate(45deg)}
+.svc-proof{background:linear-gradient(135deg,#3a0010,#670118 50%,#940622);position:relative;overflow:hidden;isolation:isolate}
+.svc-proof>*:not(.ambient){position:relative;z-index:1}
+.svc-proof h2 span{color:#ffb3c3}.svc-proof .section-heading .eyebrow{color:#ffd0da}
+.page-cta .section-heading{align-items:center;margin:0}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.value-grid article{padding:34px;border-radius:20px;background:#fff;border:1px solid #e3dadd;border-top:4px solid #940622}
+.value-grid h3{font-size:28px;margin:0 0 12px;color:#111}.value-grid p{font-size:17px;line-height:1.6;color:#3b3438;margin:0}
+.legal-body{max-width:820px}.legal-body h2{color:#111}.legal-body h3{font-size:26px;margin:40px 0 10px;color:#111}.legal-body p{font-size:18px;line-height:1.65;color:#2d282b}.legal-body a{color:#940622;text-decoration:underline}
+.draft-note{background:#94062212;border-left:4px solid #940622;padding:14px 18px}
+.page-first{padding-top:105px}
+@media(max-width:900px){.svc-detail{grid-template-columns:1fr;gap:20px;padding:50px 0}.value-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.page-hero{padding:120px 6% 70px}.page-hero h1{font-size:54px}.header nav a:not(.nav-cta){display:none}footer{flex-direction:column;align-items:flex-start}footer>div{text-align:left}.svc-list li{font-size:16px}.page-cta .section-heading{display:block}.page-cta .button{margin-top:30px}}
