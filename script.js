@@ -44,3 +44,9 @@ if(captureMode){document.documentElement.classList.remove('js-motion');window.ad
 (()=>{if(reduceMotion.matches||captureMode)return;const hosts=document.querySelectorAll('.proof,.cs-result,.work .case-stack,.page-hero,.svc-proof');
  hosts.forEach(h=>{const a=document.createElement('div');a.className='ambient';a.setAttribute('aria-hidden','true');a.innerHTML='<i class="amb-ring r1"></i><i class="amb-ring r2"></i><i class="amb-blob b1"></i><i class="amb-blob b2"></i><i class="amb-line l1"></i>'+Array.from({length:14},(_,i)=>'<i class="amb-dot" style="--x:'+((i*37)%100)+'%;--y:'+((i*61)%100)+'%;--t:'+(9+i%6*2)+'s;--dl:-'+(i*1.3)+'s"></i>').join('');h.prepend(a);});
  const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('amb-on',e.isIntersecting)));document.querySelectorAll('.ambient').forEach(a=>io.observe(a));})();
+// v20261107e mobile menu
+(()=>{const t=document.querySelector('.menu-toggle');if(!t)return;const set=o=>{document.documentElement.classList.toggle('menu-open',o);t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'Close menu':'Open menu');};
+ t.addEventListener('click',()=>set(!document.documentElement.classList.contains('menu-open')));
+ document.querySelectorAll('#site-nav a').forEach(a=>a.addEventListener('click',()=>set(false)));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.documentElement.classList.contains('menu-open')){set(false);t.focus();}});
+ matchMedia('(min-width:701px)').addEventListener('change',e=>{if(e.matches)set(false);});})();
